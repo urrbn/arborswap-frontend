@@ -18,6 +18,7 @@ import history from './routerHistory'
 import Pools from './views/Pools'
 import Swap from './views/Swap'
 import Home from './views/Home'
+import Airdrops from './pages/AirDropper/Airdrops'
 import {
   RedirectDuplicateTokenIds,
   RedirectOldAddLiquidityPathStructure,
@@ -75,6 +76,7 @@ const App: React.FC = () => {
           '/remove/:tokens',
           '/remove/:currencyIdA/:currencyIdB',
           '/nft',
+          '/airdrop'
         ]}
       >
         <Menu>
@@ -88,6 +90,9 @@ const App: React.FC = () => {
               </Route>
               <Route path="/pools">
                 <Pools />
+              </Route>
+              <Route path="/airdrop">
+                <Airdrops />
               </Route>
 
               {/* Using this format because these components use routes injected props. We need to rework them with hooks */}

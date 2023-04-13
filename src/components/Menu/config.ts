@@ -35,7 +35,11 @@ const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
     icon: 'PoolIcon',
     href: '/pools',
   },
-
+  {
+    label: t('Airdropper'),
+    icon: 'PoolIcon',
+    href: '/airdrop',
+  },
   {
     label: t('More Products'),
     icon: 'MoreIcon',

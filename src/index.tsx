@@ -5,8 +5,10 @@ import { BLOCKED_ADDRESSES } from './config/constants'
 import ListsUpdater from './state/lists/updater'
 import MulticallUpdater from './state/multicall/updater'
 import TransactionUpdater from './state/transactions/updater'
+import './index.css'
 import App from './App'
 import Providers from './Providers'
+import reportWebVitals from './reportWebVitals'
 
 function Updaters() {
   return (
@@ -38,3 +40,8 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root'),
 )
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals()
