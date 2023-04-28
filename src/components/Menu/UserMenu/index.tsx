@@ -13,6 +13,7 @@ import WalletUserMenuItem from './WalletUserMenuItem'
 const UserMenu = () => {
   const { t } = useTranslation()
   const { account } = useWeb3React()
+  console.log(account, 'account')
   const { logout } = useAuth()
   const { balance, fetchStatus } = useGetBnbBalance()
   const { isInitialized, isLoading, profile } = useProfile()

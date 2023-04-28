@@ -17,6 +17,7 @@ const ThemeProviderWrapper = (props) => {
 }
 
 const Providers: React.FC = ({ children }) => {
+  
   return (
     <Web3ReactProvider getLibrary={getLibrary}>
       <Provider store={store}>

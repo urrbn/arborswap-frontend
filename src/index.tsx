@@ -25,6 +25,7 @@ function Blocklist({ children }: { children: ReactNode }) {
     return <div>Blocked address</div>
   }
   return <>{children}</>
+  
 }
 
 ReactDOM.render(

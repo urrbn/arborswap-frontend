@@ -28,7 +28,6 @@ const sousStake = async (sousId, sousChefContract, amount, decimals = 18) => {
 }
 
 const useStakePool = (sousId: number) => {
-  debugger
   const dispatch = useAppDispatch()
   const { account } = useWeb3React()
   const sousChefContract = useSousChef(sousId)

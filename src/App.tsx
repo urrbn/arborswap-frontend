@@ -18,7 +18,7 @@ import EasterEgg from './components/EasterEgg'
 import history from './routerHistory'
 // Views included in the main bundle
 import Pools from './views/Pools'
-import Swap from './views/Swap'
+// import Swap from './views/Swap'
 import Home from './views/Home'
 
 import {
@@ -32,13 +32,13 @@ import { RedirectPathToSwapOnly, RedirectToSwap } from './views/Swap/redirects'
 // Route-based code splitting
 // Only pool is included in the main bundle because of it's the most visited page
 // const Home = lazy(() => import('./views/Home'))
-const Farms = lazy(() => import('./views/Farms'))
-const FarmAuction = lazy(() => import('./views/FarmAuction'))
+// const Farms = lazy(() => import('./views/Farms'))
+// const FarmAuction = lazy(() => import('./views/FarmAuction'))
 const NotFound = lazy(() => import('./views/NotFound'))
-const AddLiquidity = lazy(() => import('./views/AddLiquidity'))
-const Liquidity = lazy(() => import('./views/Pool'))
-const PoolFinder = lazy(() => import('./views/PoolFinder'))
-const RemoveLiquidity = lazy(() => import('./views/RemoveLiquidity'))
+// const AddLiquidity = lazy(() => import('./views/AddLiquidity'))
+// const Liquidity = lazy(() => import('./views/Pool'))
+// const PoolFinder = lazy(() => import('./views/PoolFinder'))
+// const RemoveLiquidity = lazy(() => import('./views/RemoveLiquidity'))
 
 // This config is required for number formatting
 BigNumber.config({
@@ -89,18 +89,18 @@ const App: React.FC = () => {
         <Menu>
           <SuspenseWithChunkError fallback={<PageLoader />}>
             <Switch>
-              <Route exact path="/farms/auction">
+              {/* <Route exact path="/farms/auction">
                 <FarmAuction />
               </Route>
               <Route path="/farms">
                 <Farms />
-              </Route>
+              </Route> */}
               <Route path="/pools">
                 <Pools />
               </Route>
 
               {/* Using this format because these components use routes injected props. We need to rework them with hooks */}
-              <Route exact strict path="/swap" component={Swap} />
+              {/* <Route exact strict path="/swap" component={Swap} />
               <Route exact strict path="/swap/:outputCurrency" component={RedirectToSwap} />
               <Route exact strict path="/send" component={RedirectPathToSwapOnly} />
               <Route exact strict path="/find" component={PoolFinder} />
@@ -113,21 +113,21 @@ const App: React.FC = () => {
               <Route exact path="/create/:currencyIdA" component={RedirectOldAddLiquidityPathStructure} />
               <Route exact path="/create/:currencyIdA/:currencyIdB" component={RedirectDuplicateTokenIds} />
               <Route exact strict path="/remove/:tokens" component={RedirectOldRemoveLiquidityPathStructure} />
-              <Route exact strict path="/remove/:currencyIdA/:currencyIdB" component={RemoveLiquidity} />
+              <Route exact strict path="/remove/:currencyIdA/:currencyIdB" component={RemoveLiquidity} /> */}
 
               {/* Redirect */}
-              <Route path="/pool">
+              {/* <Route path="/pool">
                 <Redirect to="/liquidity" />
-              </Route>
+              </Route> */}
               <Route path="/staking">
                 <Redirect to="/pools" />
               </Route>
-              <Route path="/syrup">
+              {/* <Route path="/syrup">
                 <Redirect to="/pools" />
               </Route>
               <Route path="/nft">
                 <Redirect to="/collectibles" />
-              </Route>
+              </Route> */}
 
               {/* 404 */}
               <Route component={NotFound} />
