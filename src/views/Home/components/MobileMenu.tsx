@@ -317,7 +317,7 @@ const MobileMenu = ({fontColor})=>{
                                         <StatsColumn>
                                             <Box as="div" style={{ color: '#A69F9F', padding: '10px' }}>
                                                 <img src="/images/home/imgnew/trade.png" alt="" /> 
-                                                <a href='/swap'>
+                                                <a href='https://www.arborswap.org/swap'>
                                                     <BoxItemName>Dex</BoxItemName>
                                                 </a>
                                             </Box>

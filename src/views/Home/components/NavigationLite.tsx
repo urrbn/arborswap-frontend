@@ -239,7 +239,7 @@ const Navigation = () => {
         </StyledUl>
         </MenuWrapper>
         <LunchApp> 
-          <Button as={Link} to="/swap" startIcon={<DashboardIcon color="#FFFFFF" />} style={{fontFamily: 'GilroyHome'}} >
+          <Button as={Link} to="/pools" startIcon={<DashboardIcon color="#FFFFFF" />} style={{fontFamily: 'GilroyHome'}} >
               Launch APP
           </Button>  
         </LunchApp>

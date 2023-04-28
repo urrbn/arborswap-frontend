@@ -194,7 +194,7 @@ const Footer = () => {
             <SecondColumn>
               <ProductColumn>
                   <MenuTitle>Products</MenuTitle>
-                  <LinkEx href="/swap" >Exchange</LinkEx>
+                  <LinkEx href="https://www.arborswap.org/swap" >Exchange</LinkEx>
                   <LinkEx href="/pools" target='_blank' >Staking</LinkEx>
                   <LinkEx href="https://protocol.arborswap.org/airdropper/airdrops" target='_blank' >Airdrop</LinkEx>
                   <LinkEx href="https://protocol.arborswap.org/locked-assets" target='_blank' >Lock</LinkEx>
