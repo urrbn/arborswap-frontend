@@ -25,7 +25,7 @@ const useAuth = () => {
 
   const login = useCallback(
     (connectorID: ConnectorNames) => {
-      console.log(connectorID, 'connectorID')
+    
       const connector = connectorsByName[connectorID]
     
       if (connector) {

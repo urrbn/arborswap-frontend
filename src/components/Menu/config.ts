@@ -40,25 +40,25 @@ const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
       }
     ],
   },
-  // {
-  //   label: t('Trade'),
-  //   icon: 'TradeIcon',
-  //   calloutClass: 'tradeIcon',
-  //   items: [
-  //     {
-  //       label: t('Exchange'),
-  //       href: '/swap',
-  //     },
-  //     {
-  //       label: t('Liquidity'),
-  //       href: '/add',
-  //     },
-  //     {
-  //       label: t('Limit Orders'),
-  //       href: '/pool',
-  //     },
-  //   ],
-  // },
+  {
+    label: t('Trade'),
+    icon: 'TradeIcon',
+    calloutClass: 'tradeIcon',
+    items: [
+      {
+        label: t('Exchange'),
+        href: 'https://www.arborswap.org/swap',
+      },
+      {
+        label: t('Liquidity'),
+        href: 'https://www.arborswap.org/add',
+      },
+      {
+        label: t('Limit Orders'),
+        href: 'https://www.arborswap.org/pool',
+      },
+    ],
+  },
   // {
   //   label: t('Farms'),
   //   icon: 'FarmIcon',

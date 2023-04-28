@@ -4,6 +4,7 @@ import { useTranslation } from 'contexts/Localization'
 import styled from 'styled-components'
 import Ndropdown from './Ndropdown'
 
+
 const ItemWrap = styled.div`
     position: relative;
 `
@@ -45,23 +46,23 @@ const MenuButton = () => {
     
     const [toggle, setToggle] = useState(false)
     const [activeItem, setActiveItem] = useState({
-        img: '/images/headericons/BinanceSmartChainBadge.svg',
-        title: 'Binance Smart Chain'
+        img: '/images/headericons/EthereumChain.svg',
+        title: 'Ethereum Chain'
     })
 
     const [itemData, setItemData] = useState([
         {
             iconimg: "/images/headericons/BinanceSmartChainBadge.svg",
             title: "Binance Smart Chain", 
-            subtitle: "Connected", 
-            status: true, 
-            isActive: true
-        },{
-            iconimg: "/images/headericons/EthereumChain.svg",
-            title: "Ethereum Chain", 
             subtitle: "Not Connected", 
             status: false, 
             isActive: false
+        },{
+            iconimg: "/images/headericons/EthereumChain.svg",
+            title: "Ethereum Chain", 
+            subtitle: "Connected", 
+            status: true, 
+            isActive: true
         },
 /*         {
             iconimg: "/images/headericons/PolygonChain.svg",
@@ -100,6 +101,9 @@ const MenuButton = () => {
         })
         
         setToggle(false)
+        if(temItem[index].title === "Binance Smart Chain"){
+            window.location.href = 'https://www.arborswap.org/add';
+        }
     }
 
   return (

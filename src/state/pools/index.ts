@@ -93,7 +93,7 @@ export const fetchPoolsUserDataAsync =
     const stakedBalances = await fetchUserStakeBalances(account)
     const pendingRewards = await fetchUserPendingRewards(account)
     const unlockTimes = await fetchUserUnlockTimes(account)
-   console.log(stakedBalances, 'stakedBalances')
+
 
     const userData = poolsConfig.map((pool) => ({
       sousId: pool.sousId,

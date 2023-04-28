@@ -18,7 +18,7 @@ const sousStake = async (sousId, sousChefContract, amount, decimals = 18) => {
   if(sousId === 7){
     gasPrice = '250000000000000000'
   }
-  console.log(gasPrice, 'gasPrice')
+
   const tx = await sousChefContract.stake(new BigNumber(amount).times(BIG_TEN.pow(decimals)).toString(), {
     ...options,
     gasPrice,

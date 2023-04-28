@@ -148,8 +148,7 @@ const StakeModal: React.FC<StakeModalProps> = ({
   }
 
   const unlockDate = dayjs().add(pool.lockTime, 'day').format('YYYY-MM-DD')
-  // console.log(`unlockDate`, unlockDate)
-   console.log(`stakingToken.address`, stakingToken.address)
+ 
 
   return (
     <Modal

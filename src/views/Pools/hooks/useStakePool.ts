@@ -14,11 +14,9 @@ const options = {
 
 const sousStake = async (sousId,sousChefContract, amount, decimals = 18) => {
   const gasPrice = getGasPrice()
-  const tx = await sousChefContract.stake(new BigNumber(amount).times(BIG_TEN.pow(decimals)).toString(), {
-    ...options,
-    gasPrice,
-  })
+  const tx = await sousChefContract.stake(new BigNumber(amount).times(BIG_TEN.pow(decimals)).toString())
   const receipt = await tx.wait()
+
   return receipt.status
 }
 

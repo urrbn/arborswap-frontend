@@ -19,12 +19,14 @@ export const useApprovePool = (lpContract: Contract, sousId, earningTokenSymbol)
   const dispatch = useAppDispatch()
   const { account } = useWeb3React()
   const sousChefContract = useDepositWallet(sousId)
-
+ 
   const handleApprove = useCallback(async () => {
     try {
       setRequestedApproval(true)
-      const tx = await callWithGasPrice(lpContract, 'approve', [sousChefContract.address, ethers.constants.MaxUint256])
+  
+      const tx = await lpContract.approve(sousChefContract.address, ethers.constants.MaxUint256);
       const receipt = await tx.wait()
+   
 
       dispatch(updateUserAllowance(sousId, account))
       if (receipt.status) {
@@ -54,7 +56,7 @@ export const useApprovePool = (lpContract: Contract, sousId, earningTokenSymbol)
     t,
     toastError,
     toastSuccess,
-    callWithGasPrice,
+    // callWithGasPrice,
   ])
 
   return { handleApprove, requestedApproval }

@@ -117,6 +117,16 @@ const tokens = {
     decimals: 18,
     projectLink: 'https://fight4hope.io/',
   },
+  dope: {
+    symbol: 'DOPE',
+    address: {
+      56: '0x9D024AE29114b7C11843312877d58B9939F6aeB2',
+      97: '0x083295D160A243D0A850Bc75E317e1c56f935EA9',
+      159: '0xFAe063159b4d83d8491271a165eECa5632E4c288',
+    },
+    decimals: 18,
+    projectLink: 'http://dopereum.com/',
+  },
   TTN: {
     symbol: 'TTN',
     // address: {

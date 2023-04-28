@@ -33,8 +33,11 @@ const Staked: React.FunctionComponent<StackedActionProps> = ({ pool, userDataLoa
     pool
   const { t } = useTranslation()
   const { account } = useWeb3React()
+  
+ 
 
   const stakingTokenContract = useERC20(stakingToken.address ? getAddress(stakingToken.address) : '')
+
   const { handleApprove: handlePoolApprove, requestedApproval: requestedPoolApproval } = useApprovePool(
     stakingTokenContract,
     sousId,

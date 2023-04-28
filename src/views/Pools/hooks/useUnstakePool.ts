@@ -9,9 +9,7 @@ import getGasPrice from 'utils/getGasPrice'
 
 const sousUnstake = async (sousChefContract, amount, decimals) => {
   const gasPrice = getGasPrice()
-  const tx = await sousChefContract.unstake(new BigNumber(amount).times(BIG_TEN.pow(decimals)).toString(), {
-    gasPrice,
-  })
+  const tx = await sousChefContract.unstake(new BigNumber(amount).times(BIG_TEN.pow(decimals)).toString())
   const receipt = await tx.wait()
   return receipt.status
 }
